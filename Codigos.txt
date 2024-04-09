@@ -1,0 +1,46 @@
+función para seleccionar un idioma al azar de la base de datos de idiomas
+
+/*function seleccionarIdiomaAlAzar() {
+    // Lista de idiomas
+    const idiomas = [
+        "Afrikáans", "Aimara", "Akan", "Albanés", "Alemán", "Amárico", "Árabe", "Armenio", "Asamés", "Azerbaiyano", 
+        "Bambara", "Bengalí", "Bhoyapurí", "Bielorruso", "Birmano", "Bosnio", "Búlgaro", "Canarés", "Catalán", 
+        "Cebuano", "Checo", "Chino", "Cingalés", "Coreano", "Corso", "Criollo haitiano", "Croata", "Danés", 
+        "Divehi", "Dogri", "Eslovaco", "Esloveno", "Español", "Esperanto", "Estonio", "Euskera", "Ewé", "Finés", 
+        "Francés", "Frisón occidental", "Gaélico escocés", "Galés", "Gallego", "Ganda", "Georgiano", "Goan Konkani", 
+        "Griego", "Guaraní", "Guyaratí", "Hausa", "Hawaiano", "Hebreo", "Hindi", "Hmong", "Húngaro", "Igbo", 
+        "Ilocano", "Indonesio", "Inglés", "Irlandés", "Islandés", "Italiano", "Japonés", "Javanés", "Jemer", 
+        "Kazajo", "Kinyarwanda", "Kirguís", "Krio", "Kurdo", "Kurdo sorani", "Lao", "Latín", "Letón", "Lingala", 
+        "Lituano", "Luxemburgués", "Macedonio", "Maithili", "Malayálam", "Malayo", "Malgache", "Maltés", "Manipurí (meitei)", 
+        "Maorí", "Maratí", "Mizo", "Mongol", "Neerlandés", "Nepalí", "Noruego", "Nyanja", "Oriya", "Oromo", "Pastún", 
+        "Persa", "Polaco", "Portugués", "Punyabí", "Quechua", "Rumano", "Ruso", "Samoano", "Sánscrito", "Serbio", 
+        "Shona", "Sindi", "Somalí", "Sotho meridional", "Sotho septentrional", "Suajili", "Sueco", "Sundanés", 
+        "Tagalo", "Tailandés", "Tamil", "Tártaro", "Tayiko", "Telugu", "Tigriña", "Tsonga", "Turco", "Turcomano", 
+        "Ucraniano", "Uigur", "Urdu", "Uzbeko", "Vietnamita", "Xhosa", "Yidis", "Yoruba", "Zulú"
+    ];
+    // Seleccionar un índice al azar
+    const indiceAleatorio = Math.floor(Math.random() * idiomas.length);
+    // Devolver el idioma seleccionado
+    return idiomas[indiceAleatorio];
+    function seleccionarIdiomaAlAzarYClick() {
+        // Obtener todos los elementos de la lista de idiomas
+        cy.contains(LOCATOR.idLanguage).then($elements => {
+          // Obtener un índice aleatorio dentro del rango de elementos
+          const randomIndex = Cypress._.random(0, $elements.length - 1);
+          // Seleccionar el elemento aleatorio
+          const $randomElement = $elements.eq(randomIndex);
+          // Obtener el texto del idioma seleccionado
+          const selectedLanguage = $randomElement.text().trim();
+          
+          // Hacer clic en el botón correspondiente al elemento seleccionado
+          $randomElement.find('.list-item__actions__status__update').click();
+      
+          // Imprimir el idioma seleccionado en la consola
+          cy.log(`Se seleccionó el idioma: ${selectedLanguage}`);
+        });
+      }
+      
+      // Llamar a la función para seleccionar un idioma al azar y hacer clic en el botón correspondiente
+      seleccionarIdiomaAlAzarYClick();
+}
+const idioma = seleccionarIdiomaAlAzar();*/
