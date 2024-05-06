@@ -3,7 +3,9 @@ class EstateLanguage {
   languageActions() {
     let CONTAINER = {
       optionParameters: 'Parámetros',
-      optionLanguages: 'Idiomas'
+      optionLanguages: 'Idiomas',
+      dialogButton: 'confirmar',
+      logoutButton:'Cerrar sesión',
 
     }
     let LOCATOR = {
@@ -18,9 +20,9 @@ class EstateLanguage {
         .eq(randomIndex)
         .click();
     });
-    cy.contains('Confirmar').click()
-
-
+    cy.contains(CONTAINER.dialogButton).click();
+    cy.wait(4000)
+    cy.contains(CONTAINER.logoutButton).click();
   }
 
 }

@@ -2,5 +2,14 @@
   "dependencies": {
     "cypress": "^13.7.1",
     "prettier": "^3.2.5"
+  },
+  "devDependencies": {
+    "cypress-autorecord": "^3.1.2"
+  },
+  "scripts": {
+    "cypress:open": "cypress open",
+    "cypress:record": "cypress run --record"
+    
   }
+  
 }

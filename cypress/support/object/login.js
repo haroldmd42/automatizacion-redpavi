@@ -1,5 +1,6 @@
 
 
+
 class LoginUser {
     formComplete() {
        let CONTAINER = {
@@ -12,12 +13,12 @@ class LoginUser {
         idButtonLogin:'button.p-element.p-ripple.p-button-rounded.p-button-secondary.p-button.p-component',
         idButtonActiveSession: 'button.p-ripple.p-element.p-button-secondary.p-button-rounded.flex.justify-content-center.uppercase.p-button.p-component.ng-star-inserted'
        }
-       cy.get(LOCATOR.idEmail).type(CONTAINER.email,{delay: 100}).should('have.value',CONTAINER.email);
-       cy.get(LOCATOR.idPassword).type(CONTAINER.password,{delay:100}).should('have.value',CONTAINER.password);
-       cy.get(LOCATOR.idButtonLogin).click();
-       cy.get(LOCATOR.idButtonActiveSession).contains('Continuar').click();
-
-
+       
+        cy.get(LOCATOR.idEmail).type(CONTAINER.email,{delay: 100}).should('have.value',CONTAINER.email);
+        cy.get(LOCATOR.idPassword).type(CONTAINER.password,{delay:100}).should('have.value',CONTAINER.password);
+        cy.get(LOCATOR.idButtonLogin).click();
+        
+    
     }
    
 }

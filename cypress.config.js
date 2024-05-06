@@ -5,6 +5,10 @@ module.exports = defineConfig({
   viewportWidth: 1920,
   e2e: {
     baseUrl:'https://redpaviqa.opitech.com.co/redpavi/auth/login',
+    video:true,
+      
+  
+    
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },
