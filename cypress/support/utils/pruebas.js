@@ -1,4 +1,4 @@
-export function createRamdomEmail() {
+function createRamdomEmail() {
     const numberRandom = Math.floor(Math.random() * 1000) + 1;
     const names = ["john", "emma", "alex", "sophia", "mike", "lucy", "david", "olivia"];
     const randomNames = names[Math.floor(Math.random() * names.length)];
@@ -7,7 +7,7 @@ export function createRamdomEmail() {
 }
 
 
-export function listNameUser() {
+function listNameUser() {
     const nombres = [
         "Juan Carlos", "Yan Harold", "María José", "Luis Miguel", "Ana María",
         "Carlos Andrés", "Laura Sofía", "Diego Alejandro", "Paula Andrea", "José Luis",
@@ -26,7 +26,7 @@ export function listNameUser() {
     return randomNameUser;
 }
 
-export function listLastnameUser() {
+function listLastnameUser() {
     const apellidos = [
         "García López", "Rodríguez Martínez", "Fernández Pérez", "González Sánchez", "Martínez López",
         "Sánchez Pérez", "Pérez Gómez", "López Martínez", "Martín Sánchez", "Serrano Gutiérrez",
@@ -44,3 +44,10 @@ export function listLastnameUser() {
     return randomLastnameUser;
 }
 
+
+const numberRandom2 = Math.floor(Math.random() * 1000) + 1;
+const ramdomemail1 = listNameUser();
+const eliminarestapcios = ramdomemail1.split(' ').join('').toLowerCase()
+
+console.log(ramdomemail1)
+console.log(eliminarestapcios+numberRandom2+'@yopmail.com')

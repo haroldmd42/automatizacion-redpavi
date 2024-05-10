@@ -2,14 +2,13 @@ import { createRamdomEmail } from "../utils/functions";
 import { listLastnameUser } from "../utils/functions";
 import { listNameUser } from "../utils/functions";
 
-class CreateUser {
-    formCompleteCreateUser() {
+class CreateUserOperator{
+    formCreateUserOperator(){
         let container = {
             logoutButton: 'Cerrar sesión',
             buttonCreate: 'Crear usuario',
             //Cambiar de perfil: Operador de territorio -> Se debe remplazar en typeProfyle
-            
-            typeProfyle: 'Profesional COAT',
+            typeProfyle: 'Líder operador de territorio',
             buttonNext: 'siguiente',
             buttonCloseWindowDialog: 'Salir sin guardar',
             buttonEndForm: 'Terminar',
@@ -24,6 +23,7 @@ class CreateUser {
             formDocumentNumber: '#user-create-documentNumber',
             formPhoneNumber: '#user-edit-phone',
             formBirthDate: '#create-user-birthdate',
+            formListCountry: 'span.p-element.p-dropdown-label.p-inputtext.p-dropdown-label-empty.ng-star-inserted',
             formEmailUser: '#create-user-email',
             formPassword: '#new-password',
             iconCloseForm: 'svg.p-icon.p-sidebar-close-icon',
@@ -36,8 +36,10 @@ class CreateUser {
 
         // Almacenar el correo electrónico aleatorio
         let randomEmail = createRamdomEmail();
+        
 
         cy.contains(container.buttonCreate).click();
+        cy.wait(1000);
         cy.contains(locator.ticketProfileRoll, container.typeProfyle).click();
         cy.wait(1000);
         cy.contains(container.buttonNext).click();
@@ -47,6 +49,13 @@ class CreateUser {
         cy.get(locator.formPhoneNumber).type('+573222345678', { delay: 100 });
         cy.get(locator.formBirthDate).type('2000-04-02')
         cy.wait(1000);
+        cy.contains(container.buttonNext).click({ force: true });
+        cy.get(locator.formListCountry).click();
+        cy.contains('Colombia').click();
+        cy.get('#states').click();
+        cy.contains('Nariño').click();
+        cy.get('#city').click();
+        cy.contains('Pasto').click();
         cy.contains(container.buttonNext).click({ force: true });
         cy.get(locator.formEmailUser).type(randomEmail, { delay: 100 });
         cy.get(locator.formPassword).type(container.password, { delay: 100 });
@@ -63,7 +72,9 @@ class CreateUser {
         cy.get(locator.formConfirmNewPassword).type(container.password);
         cy.contains(container.buttonConfirmPassword).click()
         cy.wait(5000);
+    
     }
 }
 
-export const createUser = new CreateUser();
+
+export const createUserOperator = new CreateUserOperator();
