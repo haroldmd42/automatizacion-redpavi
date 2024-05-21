@@ -51,3 +51,19 @@ const eliminarestapcios = ramdomemail1.split(' ').join('').toLowerCase()
 
 console.log(ramdomemail1)
 console.log(eliminarestapcios+numberRandom2+'@yopmail.com')
+
+
+const listTypeDocument = ['Cédula de Ciudadanía - CC',
+        'Cédula de extranjería - CE',
+        'Número Único de Identificación - NUIP',
+        'Pasaporte - PAS',
+        'Salvoconducto para refugiados - SVC',
+        'Permiso Especial de Permanencia - PEP',
+        'Permiso por Protección Temporal - PPT',
+        'Sin documento - SD'];
+    const indexTypeDocument = listTypeDocument[Math.floor(Math.random() * listTypeDocument.length)];
+    const randomTypeDocumet = indexTypeDocument;
+   
+    console.log(randomTypeDocumet)
+
+
