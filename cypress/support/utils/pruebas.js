@@ -7,6 +7,8 @@ function createRamdomEmail() {
 }
 
 
+console.log(createRamdomEmail())
+
 function listNameUser() {
     const nombres = [
         "Juan Carlos", "Yan Harold", "María José", "Luis Miguel", "Ana María",

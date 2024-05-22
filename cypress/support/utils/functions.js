@@ -1,24 +1,17 @@
-export function createRamdomEmail() {
-    const numberRandom = Math.floor(Math.random() * 1000) + 1;
-    const names = ["john", "emma", "alex", "sophia", "mike", "lucy", "david", "olivia"];
-    const randomNames = names[Math.floor(Math.random() * names.length)];
-    const randomUserName = randomNames + numberRandom + '@yopmail.com'
-    return randomUserName;
-}
 
-
+//Crea  nombres al azar
 export function listNameUser() {
     const nombres = [
-        "Juan Carlos", "Yan Harold", "María José", "Luis Miguel", "Ana María",
-        "Carlos Andrés", "Laura Sofía", "Diego Alejandro", "Paula Andrea", "José Luis",
-        "Camila Fernanda", "Andrés Felipe", "Valentina Isabel", "Pedro Antonio", "Daniela Alejandra",
+        "Juan Carlos", "Yan Harold", "Maria Jose", "Luis Miguel", "Ana Maria",
+        "Carlos Andres", "Laura Sofia", "Diego Alejandro", "Paula Andrea", "Jose Luis",
+        "Camila Fernanda", "Andres Felipe", "Valentina Isabel", "Pedro Antonio", "Daniela Alejandra",
         "Javier Eduardo", "Sara Daniela", "Felipe Ignacio", "Natalia Patricia", "Juan Sebastián",
-        "Marcela Beatriz", "Mateo Esteban", "Mónica Marcela", "Julio César", "Carolina Andrea",
-        "Miguel Ángel", "Isabela Sofía", "Germán Alonso", "Verónica Lucía", "Gabriel Alejandro",
-        "Adriana Carolina", "Hernando José", "Diana Marcela", "Manuel José", "Erika Paola",
-        "Jorge Iván", "Fabiola Patricia", "Ricardo Antonio", "Lina María", "Mario Alberto",
-        "Lucía Fernanda", "Santiago Andrés", "Martha Elena", "César Augusto", "Clara Isabel",
-        "Fernando José", "Paulina Andrea", "Alberto Enrique", "Estefanía Alejandra", "Cristian David"
+        "Marcela Beatriz", "Mateo Esteban", "Monica Marcela", "Julio Cesar", "Carolina Andrea",
+        "Miguel Angel", "Isabela Sofia", "Germán Alonso", "Verónica Lucia", "Gabriel Alejandro",
+        "Adriana Carolina", "Hernando Jose", "Diana Marcela", "Manuel Jose", "Erika Paola",
+        "Jorge Ivan", "Fabiola Patricia", "Ricardo Antonio", "Lina Maria", "Mario Alberto",
+        "Lucia Fernanda", "Santiago Andres", "Martha Elena", "Cesar Augusto", "Clara Isabel",
+        "Fernando Jose", "Paulina Andrea", "Alberto Enrique", "Estefania Alejandra", "Cristian David"
     ];
 
     const randomName = nombres[Math.floor(Math.random() * nombres.length)];
@@ -26,6 +19,8 @@ export function listNameUser() {
     return randomNameUser;
 }
 
+
+//Crea apellidos al azar
 export function listLastnameUser() {
     const apellidos = [
         "García López", "Rodríguez Martínez", "Fernández Pérez", "González Sánchez", "Martínez López",
@@ -44,6 +39,7 @@ export function listLastnameUser() {
     return randomLastnameUser;
 }
 
+////Seleccionar Orientado ha.. al azar de la lista desplegable
 export function selectOrientedTo() {
     const listOrientedTo = ['Derechos humanos', 'Género', 'Orientaciones sexuales e identidad de género diversas',
         'Curso de la vida', 'Diferencial', 'Étnico', 'Interseccionalidad', 'Territorial', 'Fronterizo y migratorio', 'Criminológico']
@@ -51,16 +47,24 @@ export function selectOrientedTo() {
     const randomOriented = indexOriented;
     return randomOriented;
 }
-
+//Seleccionar tipo de victimario al azar de la lista desplegable
 export function selectTipeVictimary() {
     const listTypeVictimary = ['Persona', 'Organización', 'Red']
     const indexTypeVictymary = listTypeVictimary[Math.floor(Math.random() * listTypeVictimary.length)];
     const randomTypeVictimary = indexTypeVictymary;
     return randomTypeVictimary;
 }
+//Seleccionar medio de traslado al azar
 
+export function selectTraslateMedium(){
+    const listMediumTraslate = ['Terrestre', 'Aérea', 'Marítima', 'Fluvial', 'Caminata' ];
+    const indexTraslateMedium = listMediumTraslate[Math.floor(Math.random() * listMediumTraslate.length)];
+    const randomTraslateMedium = indexTraslateMedium;
+    return randomTraslateMedium
+}
+//Seleccionar servicios al azar de la lista desplegable
 export function selectTipeServices() {
-    const listTypeServices = ['Protección', 'Regulación – documentación', 'Repatriación', 'Comunicación (llamadas)', 'Traslado (transporte)',
+    const listTypeServices = ['Protección', 'Regulación - documentación', 'Repatriación', 'Comunicación (llamadas)', 'Traslado (transporte)',
         'Alojamiento', 'Kit de aseo', 'Kit de vestuario', 'Atención médica', 'Asistencia psicosocial',
         'Asistencia legal', 'Asistencia seguridad social', 'Programa de inclusión sobrevivientes'];
     const indexTypeServices = listTypeServices[Math.floor(Math.random() * listTypeServices.length)];
@@ -68,6 +72,7 @@ export function selectTipeServices() {
     return randomTypeServices;
 }
 
+//Seleccionar instituciones al azar de la lista desplegable
 export function selectInstitutes(){
     const listInstitutes = ['Ministerio del trabajo', 'Consejería presidencial para la equidad de la mujer', 
         'Empresa privada - particular', 'Fundación - ongs',' Comité departamental de lucha contra la trata', 'Sijin', 
@@ -84,6 +89,7 @@ export function selectInstitutes(){
     return randomInstitutes;
 }
 
+//Seleccionar tipo de documento al azar de la lista desplegable
 export function selectTypeDocument() {
     const listTypeDocument = ['Cédula de Ciudadanía - CC',
         'Cédula de extranjería - CE',
@@ -99,7 +105,7 @@ export function selectTypeDocument() {
 
 }
 
-
+//Seleccionar rango de edades al azar de la lista desplegable
 export function selectRangeAllAges() {
     const listRangeAge = [
         '0-4', '5-9', '10-14', '15-19', '20-24',
@@ -113,7 +119,7 @@ export function selectRangeAllAges() {
     return randomRangeAge;
 }
 
-
+//Seleccionar fecha de nacimiento
 export function selectBirthDay() {
     const years = [
         '2024', '2023', '2022', '2021', '2020',
@@ -132,7 +138,6 @@ export function selectBirthDay() {
     ];
     const indexYear = years[Math.floor(Math.random() * years.length)]
     const ramdomyear = indexYear;
-
     const days = [
         '01', '02', '03', '04', '05', '06', '07', '08', '09', '10',
         '11', '12', '13', '14', '15', '16', '17', '18', '19', '20',
@@ -149,23 +154,18 @@ export function selectBirthDay() {
     const randomMonths = indexMonths;
 
     const randomDate = ramdomyear + '-' + randomMonths + '-' + randomDays;
-    return randomDate;
-
+    return randomDate
 }
-
+//Seleccionar estado civil al azar de la lista desplegable
 export function selectCivilState() {
-
-    const listCivilStates = [
-        'Soltero(a)', 'Casado(a)', 'Pareja de hecho', 'Divorciado(a)', 'Viudo(a)'
-    ];
-
+    const listCivilStates = ['Soltero(a)', 'Casado(a)', 'Pareja de hecho', 'Divorciado(a)', 'Viudo(a)'];
     const indexState = listCivilStates[Math.floor(Math.random() * listCivilStates.length)];
     const ramdomState = indexState;
     return ramdomState;
 
 }
 
-
+//Seleccionar identidad de genero al azar de la lista desplegable
 export function selectIndentityGender() {
     const listIndentityGender = ['Femenino', 'Masculino', 'Cisgénero'];
     const indexGender = listIndentityGender[Math.floor(Math.random() * listIndentityGender.length)];
@@ -173,6 +173,7 @@ export function selectIndentityGender() {
     return ramdomGender;
 }
 
+//Seleccionar orientacion sexual al azar de la lista desplegable
 export function selectSexualorientation() {
     const listSexualOrientation = ['Heterosexual', 'Gay', 'Otro'];
     const indexOrientation = listSexualOrientation[Math.floor(Math.random() * listSexualOrientation.length)];
@@ -180,12 +181,15 @@ export function selectSexualorientation() {
     return ramdomorientation;
 }
 
+//Seleccionar Discapacidad al azar de la lista desplegable
 export function selectDisability() {
     const listDisabylity = ['Auditiva', 'Visual', 'Motora', 'Cognitiva', 'Múltiple', 'Ninguna'];
     const indexDisabilyty = listDisabylity[Math.floor(Math.random() * listDisabylity.length)];
     const randomDisability = indexDisabilyty;
     return randomDisability;
 }
+
+//Seleccionar lenguaje al azar de la lista desplegable
 export function selectLanguage() {
     const listLanguage = [
         "Afrikáans", "Aimara", "Akan", "Albanés", "Alemán", "Amárico", "Árabe", "Armenio", "Asamés", "Azerbaiyano", "Bambara", "Bengalí", "Bhoyapurí", "Bielorruso", "Birmano", "Bosnio", "Búlgaro", "Canarés", "Catalán", "Cebuano", "Checo", "Chino", "Cingalés", "Coreano", "Corso", "Criollo haitiano", "Croata", "Danés", "Divehi", "Dogri", "Eslovaco", "Esloveno", "Español", "Esperanto", "Estonio", "Euskera", "Ewé", "Finés", "Francés", "Frisón occidental", "Gaélico escocés", "Galés", "Gallego", "Ganda", "Georgiano", "Goan Konkani", "Griego", "Guaraní", "Guyaratí", "Hausa", "Hawaiano", "Hebreo", "Hindi", "Hmong", "Húngaro", "Igbo", "Ilocano", "Indonesio", "Inglés", "Irlandés", "Islandés", "Italiano", "Japonés", "Javanés", "Jemer", "Kazajo", "Kinyarwanda", "Kirguís", "Krio", "Kurdo", "Kurdo sorani", "Lao", "Latín", "Letón", "Lingala", "Lituano", "Luxemburgués", "Macedonio", "Maithili", "Malayálam", "Malayo", "Malgache", "Maltés", "Manipurí (meitei)", "Maorí", "Maratí", "Mizo", "Mongol", "Neerlandés", "Nepalí", "Noruego", "Nyanja", "Oriya", "Oromo", "Pastún", "Persa", "Polaco", "Portugués", "Punyabí", "Quechua", "Rumano", "Ruso", "Samoano", "Sánscrito", "Serbio", "Shona", "Sindi", "Somalí", "Sotho meridional", "Sotho septentrional", "Suajili", "Sueco", "Sundanés", "Tagalo", "Tailandés", "Tamil", "Tártaro", "Tayiko", "Telugu", "Tigriña", "Tsonga", "Turco", "Turcomano", "Ucraniano", "Uigur", "Urdu", "Uzbeko", "Vietnamita", "Xhosa", "Yidis", "Yoruba", "Zulú"

@@ -1,4 +1,4 @@
-import { createRamdomEmail } from "../utils/functions";
+import { createRamdomEmail, emailUsers, selectBirthDay } from "../utils/functions";
 import { listLastnameUser } from "../utils/functions";
 import { listNameUser } from "../utils/functions";
 
@@ -34,10 +34,6 @@ class CreateUserOperator{
             formConfirmNewPassword: '#confirm-session-password-confirmation'
         }
 
-        // Almacenar el correo electrónico aleatorio
-        let randomEmail = createRamdomEmail();
-        
-
         cy.contains(container.buttonCreate).click();
         cy.wait(1000);
         cy.contains(locator.ticketProfileRoll, container.typeProfyle).click();
@@ -47,7 +43,7 @@ class CreateUserOperator{
         cy.get(locator.formLastName).type(listLastnameUser(), { delay: 100 });
         cy.get(locator.formDocumentNumber).type('123213123', { delay: 100 });
         cy.get(locator.formPhoneNumber).type('+573222345678', { delay: 100 });
-        cy.get(locator.formBirthDate).type('2000-04-02')
+        cy.get(locator.formBirthDate).type(selectBirthDay())
         cy.wait(1000);
         cy.contains(container.buttonNext).click({ force: true });
         cy.get(locator.formListCountry).click();
@@ -57,7 +53,11 @@ class CreateUserOperator{
         cy.get('#city').click();
         cy.contains('Pasto').click();
         cy.contains(container.buttonNext).click({ force: true });
-        cy.get(locator.formEmailUser).type(randomEmail, { delay: 100 });
+        // Almacenar el correo electrónico aleatorio
+        let randomEmail = listNameUser();
+        const numberRandom2 = Math.floor(Math.random() * 1000) + 1;
+        const randomemailsUser = randomEmail.split(' ').join('').toLowerCase()+numberRandom2+'@yopmail.com'
+        cy.get(locator.formEmailUser).type(randomemailsUser, { delay: 100 });
         cy.get(locator.formPassword).type(container.password, { delay: 100 });
         cy.wait(1000);
         cy.contains(container.buttonNext).click({ force: true });
@@ -65,7 +65,7 @@ class CreateUserOperator{
         cy.contains(container.buttonEndForm).click();
         cy.wait(5000);
         cy.contains(container.logoutButton).click();
-        cy.get(locator.idEmail).type(randomEmail, { delay: 100 });
+        cy.get(locator.idEmail).type(randomemailsUser, { delay: 100 });
         cy.get(locator.idPassword).type(container.password,{delay:100})
         cy.get(locator.idButtonLogin).click();
         cy.get(locator.formNewPassword).type(container.password);
