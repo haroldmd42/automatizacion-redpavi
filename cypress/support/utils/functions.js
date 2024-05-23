@@ -54,6 +54,7 @@ export function selectTipeVictimary() {
     const randomTypeVictimary = indexTypeVictymary;
     return randomTypeVictimary;
 }
+
 //Seleccionar medio de traslado al azar
 
 export function selectTraslateMedium(){
